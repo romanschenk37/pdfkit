@@ -55,6 +55,7 @@
     "png-js": "^1.0.0"
   },
   "scripts": {
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "build": "rollup -c && npm run build-standalone",
     "build-standalone": "browserify --standalone PDFDocument --ignore crypto --ignore iconv-lite js/pdfkit.js > js/pdfkit.standalone.js",
